@@ -1,0 +1,45 @@
+.resp-py {
+  padding-left: 90px;
+  padding-right: 90px;
+}
+.margin-page {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.display-team {
+  display: none;
+}
+.display-team-big {
+  display: block;
+}
+@media (max-width: 1024px) {
+  .resp-py {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .margin-page {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .resp-py {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .margin-page {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .display-team {
+    display: flex;
+  }
+  .display-team-big {
+    display: none;
+  }
+}

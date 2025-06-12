@@ -2,16 +2,14 @@
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
 import { useState } from "react";
-import Badge from "../Badge/Badge";
 
 const artists = [
   {
     nom: "Bari",
     prenom: "Abderhaman",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id porta ante...",
+    bio: "Dans cette toile vive et intense, Abderhaman Bari laisse libre cours à son imaginaire. Les couleurs semblent jaillir de la surface : le bleu profond du bas évoque une mer agitée ou un rêve en mouvement, tandis que le rouge et l’orange, en vagues incandescentes, rappellent la chaleur d’un feu ou les battements d’un cœur en pleine effusion.",
     couleur: "#F8B8D3",
     couleurClaire: "#FFE7F1",
-    couleurName: "Salle Rose",
     tache: "img/rose.png",
     images: ["img/Compressed_Salle rose/Abderhaman-Bari-Salle-rose.jpg"],
     interview: null,
@@ -19,9 +17,8 @@ const artists = [
   {
     nom: "Roynette",
     prenom: "Adrien",
-    bio: "Cette toile offerte au chef d’établissement de la Résidence du Maine incarne la joie et l’espoir d’Adrien Roynette. Aux mille couleurs vives, formes et teintes s’entrelacent pour créer une composition lumineuse. Pour l’artiste, exposer ses œuvres est un témoignage, un message d’espoir pour tous ceux qui traversent des moments difficiles.",
+    bio: "Duis aliquam tellus nisi, eu dictum est facilisis vel...",
     couleur: "#F8B8D3",
-    couleurName: "Salle Rose",
     couleurClaire: "#FFE7F1",
     tache: "img/rose2.png",
     images: ["img/Compressed_Salle rose/Adrien-Roynette-Salle-rose.jpg"],
@@ -32,7 +29,6 @@ const artists = [
     prenom: "Alexandra",
     bio: "Duis aliquam tellus nisi, eu dictum est facilisis vel...",
     couleur: "#8D868E",
-    couleurName: "Salle Noire",
     couleurClaire: "#F2EEF3",
     tache: "img/noire.png",
     images: ["img/Compressed_Salle noire/Alexandra-Mayolle-Salle-noir-(3).jpg"],
@@ -43,7 +39,6 @@ const artists = [
     prenom: "Bénédicte",
     bio: "Duis aliquam tellus nisi, eu dictum est facilisis vel...",
     couleur: "#6CE297",
-    couleurName: "Salle Vert",
     couleurClaire: "#DAFFE8",
     tache: "img/verte.png",
     images: ["img/Compressed_Salle verte/Bénédicte-Layet-Salle-verte.jpg"],
@@ -54,7 +49,6 @@ const artists = [
     prenom: "Brigitte",
     bio: "Duis aliquam tellus nisi, eu dictum est facilisis vel...",
     couleur: "#7FD7F9",
-    couleurName: "Salle Bleu",
     couleurClaire: "#DEF6FF",
     tache: "img/bleu.png",
     images: ["img/Compressed_Salle bleue/Brigitte-Piquard-Salle-bleue.jpg"],
@@ -65,7 +59,6 @@ const artists = [
     prenom: "Catherine",
     bio: "Duis aliquam tellus nisi, eu dictum est facilisis vel...",
     couleur: "#7FD7F9",
-    couleurName: "Salle Bleu",
     couleurClaire: "#DEF6FF",
     tache: "img/bleu2.png",
     images: ["img/Compressed_Salle bleue/Catherine-Semon-Salle-bleue.jpg"],
@@ -76,7 +69,6 @@ const artists = [
     prenom: "Dominique",
     bio: "Duis aliquam tellus nisi, eu dictum est facilisis vel...",
     couleur: "#F8B8D3",
-    couleurName: "Salle Rose",
     couleurClaire: "#FFE7F1",
     tache: "img/rose.png",
     images: ["img/Compressed_Salle rose/Dominique-Lecam-Salle-rose.jpg"],
@@ -87,7 +79,6 @@ const artists = [
     prenom: "Éric",
     bio: "Duis aliquam tellus nisi, eu dictum est facilisis vel...",
     couleur: "#EED464",
-    couleurName: "Salle Jaune",
     couleurClaire: "#FFF5CA",
     tache: "img/jaune.png",
     images: ["img/Compressed_Salle jaune/Eric-Marchand-Salle-jaune.jpg"],
@@ -98,7 +89,6 @@ const artists = [
     prenom: "Ionut",
     bio: "Duis aliquam tellus nisi, eu dictum est facilisis vel...",
     couleur: "#8D868E",
-    couleurName: "Salle Noire",
     couleurClaire: "#F2EEF3",
     tache: "img/noire2.png",
     images: ["img/Compressed_Salle noire/Ionut-Caldaru-Salle-noir.jpg"],
@@ -110,7 +100,6 @@ const artists = [
     bio: "Duis aliquam tellus nisi, eu dictum est facilisis vel...",
     couleur: "#8D868E",
     couleurClaire: "#F2EEF3",
-    couleurName: "Salle Noire",
     tache: "img/noire.png",
     images: ["img/Compressed_Salle noire/Jean-Daniel-PICHERY-Salle-noir.jpg"],
     interview: null,
@@ -121,7 +110,6 @@ const artists = [
     bio: "Duis aliquam tellus nisi, eu dictum est facilisis vel...",
     couleur: "#F0EBCD",
     couleurClaire: "#FFFDF3",
-    couleurName: "Salle Blanc",
     tache: "img/blanc.png",
     images: ["img/Compressed_Salle blanche/Julie-Capdevielle-Salle-banche.jpg"],
     interview: null,
@@ -132,7 +120,6 @@ const artists = [
     bio: "Duis aliquam tellus nisi, eu dictum est facilisis vel...",
     couleur: "#6CE297",
     couleurClaire: "#DAFFE8",
-    couleurName: "Vert",
     tache: "img/verte2.png",
     images: ["img/Compressed_Salle verte/Kévin-Campet-Salle-verte.jpg"],
     interview: null,
@@ -143,7 +130,6 @@ const artists = [
     bio: "Duis aliquam tellus nisi, eu dictum est facilisis vel...",
     couleur: "#F8B8D3",
     couleurClaire: "#FFE7F1",
-    couleurName: "Rose",
     tache: "img/rose2.png",
     images: ["img/Compressed_Salle rose/Olivier-Kammerer-Salle-rose.jpg"],
     interview: "https://lien-vers-interview.com",
@@ -154,7 +140,6 @@ const artists = [
     bio: "Duis aliquam tellus nisi, eu dictum est facilisis vel...",
     couleur: "#8D868E",
     couleurClaire: "#F2EEF3",
-    couleurName: "Noire",
     tache: "img/noire2.png",
     images: ["img/Compressed_Salle noire/Thomas Fleury - Salle noir 3.jpg"],
     interview: null,
@@ -165,27 +150,25 @@ const artists = [
     bio: "Duis aliquam tellus nisi, eu dictum est facilisis vel...",
     couleur: "#7FD7F9",
     couleurClaire: "#DEF6FF",
-    couleurName: "Bleu",
     tache: "img/bleu2.png",
     images: ["img/Compressed_Salle bleue/Yves-Bourdon-Salle-bleue-(2).jpg"],
     interview: null,
   },
 ];
-const ArtistCards2 = () => {
+const ArtistCards = () => {
   const [popupImage, setPopupImage] = useState(null);
 
   const openPopup = (src) => setPopupImage(src);
   const closePopup = () => setPopupImage(null);
 
   return (
-    <div className="relative z-[10]">
-      <div className="grid grid-cols-1 md:grid-cols-1 gap-6 px-4 md:px-16 py-10">
-        {artists.slice(0, 3).map((artist, idx) => (
+    <div className="relative">
+      <div className="flex flex-col gap-6 px-4 md:px-16 py-10">
+        {artists.map((artist, idx) => (
           <div
             key={idx}
-            className="group flex border-t-[2px] border-b-[2px] bg-transparent transition-colors duration-300 overflow-hidden"
+            className="group flex flex-col md:flex-row items-center border-t border-b border-black bg-transparent transition-colors duration-300"
             style={{
-              borderColor: artist.couleur,
               backgroundColor: "transparent",
             }}
             onMouseEnter={(e) =>
@@ -195,38 +178,34 @@ const ArtistCards2 = () => {
               (e.currentTarget.style.backgroundColor = "transparent")
             }
           >
-            <div className="w-[600px] h-[300px] relative cursor-pointer overflow-hidden flex items-center justify-center">
+            <div className="w-full md:w-1/3 h-[300px] md:h-[250px] relative cursor-pointer flex items-center justify-center">
               <img
                 src={`/${artist.images[0]}`}
                 alt={`${artist.prenom} ${artist.nom}`}
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                className="w-[90%] h-[90%] object-cover transition-transform duration-300 hover:scale-105"
                 onClick={() => openPopup(`/${artist.images[0]}`)}
               />
             </div>
 
-            <div className="w-full p-6 flex flex-col min-h-[200px]">
-              <div className="flex justify-between items-center">
-                <h2 className="text-[2.5rem] font-semibold font-[AmaticBold]">
-                  {artist.prenom} {artist.nom}
-                </h2>
-                <Badge couleur={`${artist.couleur}`}>
-                  {artist.couleurName}
-                </Badge>
-              </div>
-
-              <p className="text-[14px] mb-4 mt-4">{artist.bio}</p>
+            <div className="w-full md:w-2/3 p-6 pl-[100px] flex flex-col justify-center">
+              <h2 className="text-[3rem] font-semibold mb-2 font-[AmaticBold]">
+                {artist.prenom} {artist.nom}
+              </h2>
+              <p className="text-sm md:text-base mb-4">{artist.bio}</p>
 
               {artist.interview && (
-                <div className="flex mt-auto">
+                <div className="w-full flex  pt-[50px] items-center z-10">
                   <a
-                    href={artist.interview}
+                    href="https://neroliprak.fr"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-2 px-4 py-2 bg-transparent text-[#1e2127] rounded border border-[#1e2127] text-sm font-medium
-                    hover:bg-[#1e2127] hover:text-white transition`}
-                    aria-label={`Interview de ${artist.prenom} ${artist.nom}`}
+                    className={`mt-8 inline-flex items-center gap-2 px-6 py-3 bg-transparent text-[#1e2127] rounded-[2px] text-lg w-fit font-medium border-[#1e2127] border-[1px]
+       hover:bg-[#1e2127] hover:text-[#FFFDEF]
+       focus-visible:bg-[#1e2127] focus-visible:text-[#FFFDEF]
+       focus:outline-none focus:underline focus-visible:ring-4 focus-visible:ring-[#FFFDEF]/50 transition underline-anim"
+                    aria-label="Musée virtuel`}
                   >
-                    {`Interview ${artist.prenom}`}
-                    <ArrowUpRight size={18} />
+                    {`L'interview ${artist.prenom} ${artist.nom}`}
+                    <ArrowUpRight size={20} />
                   </a>
                 </div>
               )}
@@ -234,34 +213,21 @@ const ArtistCards2 = () => {
           </div>
         ))}
       </div>
+
       {popupImage && (
         <div
           onClick={closePopup}
-          className="fixed inset-0 z-50 bg-black/80 max-h-full flex items-center justify-center cursor-zoom-out"
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center cursor-zoom-out"
         >
           <img
             src={popupImage}
             alt="Popup"
-            className="max-w-full max-h-full object-contain justify-center"
+            className="max-w-full max-h-full object-contain"
           />
         </div>
       )}
-      <div className="w-full flex justify-center items-center z-10">
-        <a
-          href="https://neroliprak.fr"
-          rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-[#1e2127] text-white rounded-[2px] text-[16px] w-fit font-medium border-[#1e2127] border-[1px]
-       hover:bg-transparent hover:text-[#1e2127]
-       focus-visible:bg-[#1e2127] focus-visible:text-transparent
-       focus:outline-none focus-visible:ring-4 focus-visible:ring-white/50 transition underline-anim focus:underline"
-          aria-label="Musée virtuel"
-        >
-          En savoir plus
-          <ArrowUpRight size={20} />
-        </a>
-      </div>
     </div>
   );
 };
 
-export default ArtistCards2;
+export default ArtistCards;

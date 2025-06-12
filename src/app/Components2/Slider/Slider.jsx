@@ -8,12 +8,12 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 
 const images = [
-  "/img/salle-blanc.png",
+  "/img/salle-blanche-musee.png",
+  "/img/salle-verte-musee.png",
+  "/img/salle-jaune-musee.png",
+  "/img/salle-noire-musee.png",
+  "/img/salle-rose-musee.png",
   "/img/salle-bleu.png",
-  "/img/salle-jaune.png",
-  "/img/salle-noir.png",
-  "/img/salle-rose.png",
-  "/img/salle-verte.png",
 ];
 
 const Slider = () => {

@@ -1,0 +1,109 @@
+.underline-animation {
+  position: relative;
+  display: inline-block;
+  padding-top: 8px;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.underline-animation::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 1px;
+  width: 0%;
+  background-color: currentColor;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform-origin: center;
+}
+
+.group:hover .underline-animation::after,
+.group:focus-within .underline-animation::after {
+  width: 100%;
+  left: 0;
+}
+
+.group:hover .underline-animation,
+.group:focus-within .underline-animation {
+  color: white;
+}
+
+.custom-padding-lr {
+  padding-left: 90px;
+  padding-right: 90px;
+}
+.custom-padding-lr2 {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.logo-svg {
+  font-size: 1.5rem;
+}
+.btn-top-herosection {
+  top: 250px;
+}
+.image-about {
+  width: 40%;
+}
+.text-about {
+  width: 60%;
+}
+.display-none-about {
+  display: block;
+}
+
+.flex2 {
+  display: flex;
+}
+
+@media (max-width: 880px) {
+  .custom-padding-lr {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .logo-svg {
+    font-size: 1.2rem;
+  }
+  .image-about {
+    width: 30%;
+  }
+  .text-about {
+    width: 70%;
+  }
+}
+@media (max-width: 760px) {
+  .custom-padding-lr {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .top-titleTeam {
+    top: 0px;
+  }
+  .btn-top-herosection {
+    top: 0px;
+  }
+  .custom-padding-lr2 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .flex2 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .display-none-about {
+    display: none;
+  }
+  .text-about {
+    width: 100%;
+  }
+  .image-about {
+    width: 0%;
+  }
+}

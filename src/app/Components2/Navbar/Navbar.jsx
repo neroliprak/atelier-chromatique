@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
@@ -21,7 +22,7 @@ const Navbar = () => {
       {navLinks.map((link) => (
         <nav key={link.name}>
           <li className="z-[999] text-[1rem]">
-            <div className="group sm:hover:bg-transparent hover:bg-[#323741] text-[#1e2127] transition-colors rounded">
+            <div className="group sm:hover:bg-transparent hover:bg-[#323741] transition-colors rounded">
               <Link
                 href={link.href}
                 onClick={onClick}
@@ -40,16 +41,17 @@ const Navbar = () => {
 
   return (
     <nav
-      className="text-[18px] fixed z-[999] w-full text-lg text-[#1e2127] transition-all duration-300 ease-in-out"
+      className="text-[18px] fixed z-[999] w-full text-lg text-black transition-all duration-300 ease-in-out"
       style={{
-        background: "rgba(255, 253, 239, 0.8)",
-        backdropFilter: "blur(50px)",
+        background: "#FBF7E0",
+        // rgba(46, 46, 46, 0.9)
+        backdropFilter: "blur(10px)",
       }}
       role="navigation"
       aria-label="Navigation principale"
     >
-      <div className="flex items-center justify-between px-[150px] 900:px-[200px] py-[20px]">
-        <Link href="/" className="flex items-center gap-[10px]">
+      <div className="flex items-center justify-between px-[150px] 900:px-[200px] py-[20px] ">
+        <Link href="/" className="flex items-center gap-[90px]">
           <Image src={`/img/logo.svg`} width={50} height={50} alt={"accueil"} />
           <span className="font-bold font-[AmaticBold] text-[1.5rem]">
             l’atelier chromatique
@@ -81,7 +83,7 @@ const Navbar = () => {
       <div
         className="mx-auto mt-0"
         style={{
-          width: "90%",
+          width: "100%",
           borderBottom: "1px solid #8D868E",
         }}
       />

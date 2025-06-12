@@ -1,10 +1,9 @@
-import ArtistCards from "../ArtistCards/ArtistsCards";
+import "./../../Artiste/artiste.css";
 import ArtistCards2 from "../ArtistCards/ArtistsCards2";
 const Artistes = () => {
   return (
     <>
-      <section className="text-[#1e2127] px-[90px]">
-        {" "}
+      <section id="artiste" className="text-[#1e2127] custom-padding-lr">
         <h2 className="font-[AmaticBold] text-[5rem] z-10 text-center">
           Les artistes
         </h2>

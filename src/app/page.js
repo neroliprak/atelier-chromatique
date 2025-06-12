@@ -1,26 +1,22 @@
-import Navbar from "./Components/Navbar/Navbar";
-import Herosection from "./Components/Herosection/Herosection";
-import Navbar2 from "./Components/Navbar/Navbar2";
-import Herosection2 from "./Components/Herosection/HeroSection2";
-import About from "./Components/About/About";
-import Concept from "./Components/Concept/Concept";
-import Artistes from "./Components/Artistes/Artistes";
-import Team from "./Components/Team/Team";
-import Footer from "./Components/Footer/Footer";
+import Navbar2 from "./Components2/Navbar/Navbar2";
+import Herosection2 from "./Components2/Herosection/HeroSection2";
+import About from "./Components2/About/About";
+import Concept from "./Components2/Concept/Concept";
+import Artistes from "./Components2/Artistes/Artistes";
+import Team from "./Components2/Team/Team";
+import Footer from "./Components2/Footer/Footer";
+import "./Artiste/artiste.css";
 export default function Home() {
   return (
     <>
-      <Navbar />
-      {/* <Herosection /> */}
-      {/* <Navbar2 /> */}
+      <Navbar2 />
       <Herosection2 />
-      <div className="mt-[90px]"></div>
       <About />
-      <div className="mt-[90px]"></div>
+      <div className="margin-page"></div>
       <Concept />
-      <div className="mt-[90px]"></div>
+      <div className="margin-page"></div>
       <Artistes />
-      <div className="mt-[90px]"></div>
+      <div className="margin-page"></div>
       <Team />
       <Footer />
     </>
