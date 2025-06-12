@@ -13,17 +13,18 @@ const navLinks = [
   { id: "musee", name: "Le musée", href: "#musee" },
   { id: "concept", name: "Le concept", href: "#concept" },
   { id: "artiste", name: "Les artistes", href: "#artiste" },
-  { id: "about", name: "Notre équipe", href: "#about" },
+  { id: "about", name: "Notre équipe", href: "#equipe" },
 ];
 
 const Navbar2 = () => {
   const pathname = usePathname();
-  const isArtistePage = pathname === "/Artiste";
+  const isStaticPage = ["/Artiste", "/Equipes"].includes(pathname);
+
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    if (isArtistePage) return;
+    if (isStaticPage) return;
 
     const handleScroll = () => {
       setScrolled(
@@ -33,7 +34,7 @@ const Navbar2 = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isArtistePage]);
+  }, [isStaticPage]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -46,28 +47,37 @@ const Navbar2 = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [isOpen]);
 
-  const NavItems = ({ onClick }) => (
-    <>
-      {navLinks.map((link) => (
-        <li
-          key={link.id}
-          className="z-[999] text-base transition-colors duration-300"
-        >
-          <div className="group sm:hover:bg-transparent hover:bg-[#323741] transition-colors rounded">
-            <Link
-              href={link.href}
-              onClick={onClick}
-              className="block w-full sm:px-0 sm:py-0 px-2 py-3 focus:outline-none  focus:p-[4px]"
+  const NavItems = ({ onClick }) => {
+    const pathname = usePathname();
+    const isHome = pathname === "/";
+
+    return (
+      <>
+        {navLinks.map((link) => {
+          const href = isHome ? link.href : `/${link.href}`;
+          return (
+            <li
+              key={link.id}
+              className="z-[999] text-base transition-colors duration-300"
             >
-              <span className="underline-animation transition-all">
-                {link.name}
-              </span>
-            </Link>
-          </div>
-        </li>
-      ))}
-    </>
-  );
+              <div className="group sm:hover:bg-transparent hover:bg-[#323741] transition-colors rounded">
+                <Link
+                  href={href}
+                  onClick={onClick}
+                  className="block w-full sm:px-0 sm:py-0 px-2 py-3 focus:outline-none focus:p-[4px]"
+                >
+                  <span className="underline-animation transition-all">
+                    {link.name}
+                  </span>
+                </Link>
+              </div>
+            </li>
+          );
+        })}
+      </>
+    );
+  };
+
   return (
     <>
       <a
@@ -80,13 +90,15 @@ const Navbar2 = () => {
       <header
         role="banner"
         className={`fixed top-0 left-0 w-full z-[999] transition-all duration-300 ${
-          isArtistePage || scrolled
+          isStaticPage || scrolled
             ? "bg-[#20252C] text-[#FFFAF4]"
             : "bg-transparent text-white"
         }`}
       >
         <nav
-          className="text-base text-[#FFFAF4] transition-all duration-300 ease-in-out"
+          className={`text-base transition-all duration-300 ease-in-out ${
+            isStaticPage || scrolled ? "text-[#FFFAF4]" : "text-white"
+          }`}
           aria-label="Navigation principale"
         >
           <div className="flex items-center justify-between  py-[20px] custom-padding-lr">

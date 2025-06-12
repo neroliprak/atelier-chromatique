@@ -1,3 +1,5 @@
+"use client";
+import { ArrowUpRight } from "lucide-react";
 import "./../../Artiste/artiste.css";
 import "./../Navbar/navbar.css";
 
@@ -13,6 +15,7 @@ max-sm:h-[1800px]"
           <h2 className=" display-team leading-20 relative font-[AmaticBold] text-[5rem] top-[0px] z-[10] text-center top-titleTeam flex-wrap">
             Qui sommes-nous ?
           </h2>
+
           <p className="text-lg text-center py-[20px]">
             Nous sommes une équipe passionnée qui a conçu ce musée virtuel pour
             mettre en avant les talents d'artistes en situation de handicap.
@@ -41,7 +44,7 @@ max-sm:h-[1800px]"
           </div>
         </div>
 
-        <h2 className="leading-20 relative font-[AmaticBold] text-[5rem]  z-[10] text-center top-[300px] flex-wrap display-team-big">
+        <h2 className="leading-20 relative font-[AmaticBold] text-[5rem]  z-[10] text-center top-[350px] flex-wrap display-team-big">
           Qui sommes-nous ?
         </h2>
         <div className="relative w-full h-full display-team-big">
@@ -62,7 +65,7 @@ max-sm:h-[1800px]"
             <img
               src="./img/andrea-polaroid.png"
               className="w-[300px]"
-              alt="Membre 2"
+              alt="Andréa"
             />
           </div>
           <div
@@ -72,7 +75,7 @@ max-sm:h-[1800px]"
             <img
               src="./img/hugo-polaroid.png"
               className="w-[300px]"
-              alt="Membre 3"
+              alt="Hugo"
             />
           </div>
           <div
@@ -82,13 +85,32 @@ max-sm:h-[1800px]"
             <img
               src="./img/pauline-polaroid.png"
               className="w-[300px]"
-              alt="Membre 4"
+              alt="Pauline"
             />
           </div>
-          <p className="absolute left-1/2 top-[40%] transform -translate-x-1/2 -translate-y-1/2 w-[30%] text-center text-lg">
-            Nous sommes une équipe passionnée qui a conçu ce musée virtuel pour
-            mettre en avant les talents d'artistes en situation de handicap.
-          </p>
+          <div>
+            <p className="absolute left-1/2 top-[40%] transform -translate-x-1/2 -translate-y-1/2 w-[30%] text-center text-lg">
+              Nous sommes une équipe passionnée qui a conçu ce musée virtuel
+              pour mettre en avant les talents d'artistes en situation de
+              handicap.
+            </p>
+            <div className="absolute w-full flex justify-center items-center z-10 top-[45%]">
+              <a
+                href="http://localhost:3000/Equipes"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-2 px-6 py-3 
+    bg-[#1e2127] text-white rounded-[2px] text-[16px] w-fit font-medium 
+    border border-[#1e2127] transition 
+    hover:bg-transparent hover:text-[#1e2127] hover:underline hover:decoration-[#1e2127] 
+    focus:outline-none focus-visible:ring-4 focus-visible:ring-white/50 
+    focus-visible:bg-transparent focus-visible:text-[#1e2127] focus-visible:underline focus-visible:decoration-[#1e2127]"
+                aria-label="Musée virtuel"
+              >
+                Notre équipe
+                <ArrowUpRight size={20} />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </>
