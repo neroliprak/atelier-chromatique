@@ -30,7 +30,7 @@ const Herosection2 = () => {
           </span>
         </h1>
 
-        <div className="w-full flex relative btn-top-herosection top-[250px] justify-center items-center z-10">
+        {/* <div className="w-full flex relative btn-top-herosection top-[250px] justify-center items-center z-10">
           <a
             href="https://neroliprak.fr"
             rel="noopener noreferrer"
@@ -43,7 +43,7 @@ const Herosection2 = () => {
             Téléchargez notre exposition
             <ArrowUpRight size={20} />
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

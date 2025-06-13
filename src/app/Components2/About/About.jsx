@@ -26,7 +26,7 @@ const About = () => {
               œuvres originales, sensibles et puissantes, réalisées par des
               artistes.
             </p>
-            <div className="w-full flex justify-start items-center z-10">
+            {/* <div className="w-full flex justify-start items-center z-10">
               <a
                 href="https://neroliprak.fr"
                 rel="noopener noreferrer"
@@ -39,7 +39,7 @@ const About = () => {
                 Visionnez le teaser
                 <ArrowUpRight size={20} />
               </a>
-            </div>
+            </div> */}
           </div>
         </section>
       </main>
