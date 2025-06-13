@@ -80,12 +80,14 @@ const Navbar2 = () => {
 
   return (
     <>
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute  bg-white text-[#20252C] z-[1000]"
-      >
-        Aller au contenu principal
-      </a>
+      {pathname === "/" && (
+        <Link
+          href="/#main-content"
+          className="sr-only focus:not-sr-only focus:absolute bg-white text-[#20252C] z-[1000]"
+        >
+          Aller au contenu principal
+        </Link>
+      )}
 
       <header
         role="banner"

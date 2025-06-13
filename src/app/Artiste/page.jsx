@@ -5,6 +5,7 @@ import Navbar2 from "../Components2/Navbar/Navbar2";
 import { useState } from "react";
 import Badge from "../Components2/Badge/Badge";
 import Footer from "../Components2/Footer/Footer";
+import { ArrowUpRight } from "lucide-react";
 
 const artists = [
   {
@@ -264,10 +265,26 @@ const Artiste = () => {
             className={`border-t-1 p-4 text-black gap-[10px] hover:bg-[${artist.couleurClaire}]`}
           >
             <img src={artist.images} className="h-[400px] w-full" alt="" />
-            <div className="flex justify-between items-center mb-2">
-              <h3 className="font-bold text-lg mb-8 mt-8">
-                {artist.prenom} {artist.nom}
-              </h3>
+            <div className="flex justify-between items-center">
+              <div className="flex flex-col gap-[5px] my-5">
+                <h3 className="font-bold text-lg mt-5">
+                  {artist.prenom} {artist.nom}
+                </h3>
+                {artist.interview && (
+                  <div className="flex mt-auto my-[30px]">
+                    <a
+                      href={artist.interview}
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center gap-2 px-4 py-2 bg-transparent text-[#1e2127] rounded border border-[#1e2127] text-sm font-medium
+                    hover:bg-[#1e2127] hover:text-white transition`}
+                      aria-label={`Interview de ${artist.prenom} ${artist.nom}`}
+                    >
+                      {`Interview ${artist.prenom}`}
+                      <ArrowUpRight size={18} />
+                    </a>
+                  </div>
+                )}
+              </div>
               <Badge couleur={artist.couleur} children={artist.couleurName} />
             </div>
 

@@ -1,9 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
 
-const Herosection = () => {
+const Herosection2 = () => {
   return (
     <section
-      id="musee"
+      id="musee main-content"
       className="relative text-[#323741] h-[100vh] flex items-center justify-center overflow-hidden"
     >
       <div className="absolute top-[50%] left-1/2 w-[100%] h-[100%] -translate-x-1/2 -translate-y-1/2 ">
@@ -11,7 +11,7 @@ const Herosection = () => {
 
         <video
           className="w-full h-[100vh] object-cover "
-          src="/video/musee-test-teaser.mp4"
+          src="/video/video-site-ateleirchromatique2.mp4"
           autoPlay
           loop
           muted
@@ -49,4 +49,4 @@ const Herosection = () => {
   );
 };
 
-export default Herosection;
+export default Herosection2;

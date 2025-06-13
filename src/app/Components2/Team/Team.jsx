@@ -2,6 +2,7 @@
 import { ArrowUpRight } from "lucide-react";
 import "./../../Artiste/artiste.css";
 import "./../Navbar/navbar.css";
+import Link from "next/link";
 
 const Team = () => {
   return (
@@ -94,10 +95,10 @@ max-sm:h-[1800px]"
               pour mettre en avant les talents d'artistes en situation de
               handicap.
             </p>
+
             <div className="absolute w-full flex justify-center items-center z-10 top-[45%]">
-              <a
-                href="http://localhost:3000/Equipes"
-                rel="noopener noreferrer"
+              <Link
+                href="/Equipes"
                 className="mt-8 inline-flex items-center gap-2 px-6 py-3 
     bg-[#1e2127] text-white rounded-[2px] text-[16px] w-fit font-medium 
     border border-[#1e2127] transition 
@@ -105,10 +106,11 @@ max-sm:h-[1800px]"
     focus:outline-none focus-visible:ring-4 focus-visible:ring-white/50 
     focus-visible:bg-transparent focus-visible:text-[#1e2127] focus-visible:underline focus-visible:decoration-[#1e2127]"
                 aria-label="Musée virtuel"
+                passHref
               >
                 Notre équipe
                 <ArrowUpRight size={20} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import React from "react";
 import { useState } from "react";
 import Badge from "../Badge/Badge";
+import Link from "next/link";
 
 const artists = [
   {
@@ -115,8 +116,8 @@ const ArtistCards2 = () => {
         </div>
       )}
       <div className="w-full flex justify-center items-center z-10">
-        <a
-          href="http://localhost:3000/Artiste"
+        <Link
+          href="/Artiste"
           rel="noopener noreferrer"
           className="mt-8 inline-flex items-center gap-2 px-6 py-3 
     bg-[#1e2127] text-white rounded-[2px] text-[16px] w-fit font-medium 
@@ -128,7 +129,7 @@ const ArtistCards2 = () => {
         >
           Voir tous les artistes
           <ArrowUpRight size={20} />
-        </a>
+        </Link>
       </div>
     </div>
   );
