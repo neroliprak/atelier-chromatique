@@ -64,7 +64,7 @@ const Navbar2 = () => {
                 <Link
                   href={href}
                   onClick={onClick}
-                  className="block w-full sm:px-0 sm:py-0 px-2 py-3 focus:outline-none focus:p-[4px]"
+                  className="block w-full sm:px-0 sm:py-0 px-2 py-3 focus-visible:outline-white"
                 >
                   <span className="underline-animation transition-all">
                     {link.name}
@@ -90,7 +90,6 @@ const Navbar2 = () => {
       )}
 
       <header
-        role="banner"
         className={`fixed top-0 left-0 w-full z-[999] transition-all duration-300 ${
           isStaticPage || scrolled
             ? "bg-[#20252C] text-[#FFFAF4]"
@@ -120,10 +119,7 @@ const Navbar2 = () => {
               </span>
             </Link>
 
-            <ul
-              className="hidden sm:flex items-center gap-[20px] text-[var(--links)]"
-              role="menubar"
-            >
+            <ul className="hidden sm:flex items-center gap-[20px] text-[var(--links)]">
               <NavItems />
             </ul>
             <div className="flex items-center sm:hidden">
@@ -132,7 +128,7 @@ const Navbar2 = () => {
                 aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
                 aria-expanded={isOpen}
                 aria-controls="menu-mobile"
-                className="focus:outline-none"
+                className=""
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -144,10 +140,7 @@ const Navbar2 = () => {
               id="menu-mobile"
               className="sm:hidden border-t border-white/10"
             >
-              <ul
-                className="flex flex-col px-6 py-4 gap-2 bg-[#1e2127] backdrop-blur-md"
-                role="menu"
-              >
+              <ul className="flex flex-col px-6 py-4 gap-2 bg-[#1e2127] backdrop-blur-md">
                 <NavItems onClick={() => setIsOpen(false)} />
               </ul>
             </div>

@@ -1,7 +1,7 @@
 "use client";
 import { ArrowUpRight } from "lucide-react";
 import "./../../Artiste/artiste.css";
-import "./../Navbar/navbar.css";
+import "../Navbar/navbar.css";
 import Link from "next/link";
 
 const Team = () => {

@@ -1,5 +1,5 @@
-import Footer from "../Components2/Footer/Footer";
-import Navbar2 from "../Components2/Navbar/Navbar2";
+import Footer from "../Components/Footer/Footer";
+import Navbar2 from "../Components/Navbar/Navbar";
 
 const Teams = () => {
   return (

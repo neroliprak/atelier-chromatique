@@ -1,10 +1,10 @@
 "use client";
 import "./artiste.css";
 
-import Navbar2 from "../Components2/Navbar/Navbar2";
+import Navbar2 from "../Components/Navbar/Navbar";
 import { useState } from "react";
-import Badge from "../Components2/Badge/Badge";
-import Footer from "../Components2/Footer/Footer";
+import Badge from "../Components/Badge/Badge";
+import Footer from "../Components/Footer/Footer";
 import { ArrowUpRight } from "lucide-react";
 
 const artists = [
