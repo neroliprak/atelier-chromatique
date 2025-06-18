@@ -64,7 +64,7 @@ const Navbar2 = () => {
                 <Link
                   href={href}
                   onClick={onClick}
-                  className="block w-full sm:px-0 sm:py-0 px-2 py-3 focus-visible:outline-white"
+                  className="block w-full sm:px-0 sm:py-0 px-2 py-3 focus-visible:outline-white focus-visible:p-[4px] focus-visible:outline-1"
                 >
                   <span className="underline-animation transition-all">
                     {link.name}
@@ -102,7 +102,7 @@ const Navbar2 = () => {
           }`}
           aria-label="Navigation principale"
         >
-          <div className="flex items-center justify-between  py-[20px] custom-padding-lr">
+          <div className="flex items-center justify-between py-[20px] custom-padding-lr">
             <Link
               href="/"
               className="flex items-center gap-[10px]"
@@ -139,6 +139,8 @@ const Navbar2 = () => {
             <div
               id="menu-mobile"
               className="sm:hidden border-t border-white/10"
+              aria-hidden={!isOpen}
+              style={{ display: isOpen ? "block" : "none" }}
             >
               <ul className="flex flex-col px-6 py-4 gap-2 bg-[#1e2127] backdrop-blur-md">
                 <NavItems onClick={() => setIsOpen(false)} />

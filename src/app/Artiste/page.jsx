@@ -1,7 +1,7 @@
 "use client";
 import "./artiste.css";
 
-import Navbar2 from "../Components/Navbar/Navbar";
+import Navbar from "../Components/Navbar/Navbar";
 import { useState } from "react";
 import Badge from "../Components/Badge/Badge";
 import Footer from "../Components/Footer/Footer";
@@ -257,7 +257,7 @@ const BioArtiste = ({ texte }) => {
 const Artiste = () => {
   return (
     <>
-      <Navbar2 />
+      <Navbar />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px] p-4 resp-py mt-[80px]">
         {artists.map((artist, index) => (
           <div
@@ -274,7 +274,6 @@ const Artiste = () => {
                   <div className="flex mt-auto my-[30px]">
                     <a
                       href={artist.interview}
-                      rel="noopener noreferrer"
                       className={`inline-flex items-center gap-2 px-4 py-2 bg-transparent text-[#1e2127] rounded border border-[#1e2127] text-sm font-medium
                     hover:bg-[#1e2127] hover:text-white transition`}
                       aria-label={`Interview de ${artist.prenom} ${artist.nom}`}

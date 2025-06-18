@@ -3,13 +3,14 @@ import { ArrowRight } from "lucide-react";
 const Herosection = () => {
   return (
     <section
-      id="musee main-content"
+      id="musee"
       className="relative text-[#323741] h-[100vh] flex items-center justify-center overflow-hidden"
     >
       <div className="absolute top-0 left-0 w-full h-full z-0">
         <div className="absolute w-full h-full z-10 pointer-events-none bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.3)_0%,_rgba(0,0,0,0.4)_70%,_rgba(0,0,0,0.6)_100%)]" />
 
         <video
+          loading="lazy"
           aria-hidden="true"
           className="w-full h-full object-cover"
           src="/video/musee-virtuel-atelierchromatique.mp4"

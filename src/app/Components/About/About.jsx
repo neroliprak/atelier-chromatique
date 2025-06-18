@@ -37,12 +37,10 @@ const About = () => {
           <div className="w-full flex justify-start items-center z-10">
             <a
               href="https://neroliprak.fr"
-              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 px-6 py-3 bg-[#1e2127] text-[#FFFDEF] rounded-[2px] text-base w-fit font-medium border-[#1e2127] border-[1px]
                 hover:bg-[#FFFDEF] hover:text-[#1e2127]
                 focus-visible:bg-[#FFFDEF] focus-visible:text-[#1e2127]
-                focus:outline-none focus:underline transition underline-anim"
-              aria-label="Visionner le teaser du musée"
+                focus:underline transition underline-anim"
             >
               Visionnez le teaser
               <ArrowRight
