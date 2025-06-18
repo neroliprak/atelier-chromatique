@@ -1,5 +1,5 @@
 "use client";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import "./../../Artiste/artiste.css";
 import "../Navbar/navbar.css";
 import Link from "next/link";
@@ -13,9 +13,11 @@ const Team = () => {
 max-sm:h-[1800px]"
       >
         <div className="display-team flex-col">
-          <h2 className=" display-team leading-20 relative font-[AmaticBold] text-[5rem] top-[0px] z-[10] text-center top-titleTeam flex-wrap">
-            Qui sommes-nous ?
-          </h2>
+          <div className="flex justify-center">
+            <h2 className="font-[AmaticBold] text-[5rem] leading-20 text-center">
+              Qui sommes-nous ?
+            </h2>
+          </div>
 
           <p className="text-lg text-center py-[20px]">
             Nous sommes une équipe passionnée qui a conçu ce musée virtuel pour
@@ -43,6 +45,22 @@ max-sm:h-[1800px]"
               alt="Membre 4"
             />
           </div>
+          <div className="flex justify-center z-10 ">
+            <a
+              href="/Equipes"
+              className="group inline-flex items-center gap-2 px-6 py-3 bg-[#1e2127] text-[#FFFDEF] rounded-[2px] text-base w-fit font-medium border-[#1e2127] border-[1px]
+                hover:bg-[#FFFDEF] hover:text-[#1e2127]
+                focus-visible:bg-[#FFFDEF] focus-visible:text-[#1e2127]
+                focus:underline transition"
+            >
+              Notre équipe
+              <ArrowRight
+                size={20}
+                className="transition-transform duration-300  group-hover:[transform:rotate(-50deg)]"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
         </div>
 
         <h2 className="leading-20 relative font-[AmaticBold] text-[5rem]  z-[10] text-center top-[350px] flex-wrap display-team-big">
@@ -50,7 +68,7 @@ max-sm:h-[1800px]"
         </h2>
         <div className="relative w-full h-full display-team-big">
           <div
-            className="absolute left-[0%] top-[40%] -translate-y-1/2"
+            className="absolute left-[-10%] top-[40%] -translate-y-1/2"
             style={{ transform: "translateY(-50%) rotate(-10deg)" }}
           >
             <img
@@ -60,7 +78,7 @@ max-sm:h-[1800px]"
             />
           </div>
           <div
-            className="absolute left-[5%] top-[70%] -translate-y-1/2"
+            className="absolute left-[-8%] top-[70%] -translate-y-1/2"
             style={{ transform: "translateY(-50%) rotate(-30deg)" }}
           >
             <img
@@ -70,7 +88,7 @@ max-sm:h-[1800px]"
             />
           </div>
           <div
-            className="absolute right-[0%] top-[40%] -translate-y-1/2"
+            className="absolute right-[-10%] top-[40%] -translate-y-1/2"
             style={{ transform: "translateY(-50%) rotate(8deg)" }}
           >
             <img
@@ -80,7 +98,7 @@ max-sm:h-[1800px]"
             />
           </div>
           <div
-            className="absolute right-[5%] top-[70%] -translate-y-1/2"
+            className="absolute right-[-8%] top-[70%] -translate-y-1/2"
             style={{ transform: "translateY(-50%) rotate(20deg)" }}
           >
             <img
@@ -96,21 +114,21 @@ max-sm:h-[1800px]"
               handicap.
             </p>
 
-            <div className="absolute w-full flex justify-center items-center z-10 top-[45%]">
-              <Link
+            <div className="absolute w-full flex justify-center items-center z-10 top-[50%]">
+              <a
                 href="/Equipes"
-                className="mt-8 inline-flex items-center gap-2 px-6 py-3 
-    bg-[#1e2127] text-white rounded-[2px] text-[16px] w-fit font-medium 
-    border border-[#1e2127] transition 
-    hover:bg-transparent hover:text-[#1e2127] hover:underline hover:decoration-[#1e2127] 
-    focus:outline-none focus-visible:ring-4 focus-visible:ring-white/50 
-    focus-visible:bg-transparent focus-visible:text-[#1e2127] focus-visible:underline focus-visible:decoration-[#1e2127]"
-                aria-label="Musée virtuel"
-                passHref
+                className="group inline-flex items-center gap-2 px-6 py-3 bg-[#1e2127] text-[#FFFDEF] rounded-[2px] text-base w-fit font-medium border-[#1e2127] border-[1px]
+                hover:bg-[#FFFDEF] hover:text-[#1e2127]
+                focus-visible:bg-[#FFFDEF] focus-visible:text-[#1e2127]
+                focus:underline transition underline-anim"
               >
                 Notre équipe
-                <ArrowUpRight size={20} />
-              </Link>
+                <ArrowRight
+                  size={20}
+                  className="transition-transform duration-300  group-hover:[transform:rotate(-50deg)]"
+                  aria-hidden="true"
+                />
+              </a>
             </div>
           </div>
         </div>

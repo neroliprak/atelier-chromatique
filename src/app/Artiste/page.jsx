@@ -255,6 +255,8 @@ const BioArtiste = ({ texte }) => {
 };
 
 const Artiste = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   return (
     <>
       <Navbar />
@@ -262,7 +264,14 @@ const Artiste = () => {
         {artists.map((artist, index) => (
           <div
             key={index}
-            className={`border-t-1 p-4 text-black gap-[10px] hover:bg-[${artist.couleurClaire}]`}
+            className={`border-t-1 p-4 text-black gap-[10px] `}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            style={{
+              backgroundColor:
+                hoveredIndex === index ? artist.couleurClaire : "transparent",
+              transition: "background-color 0.3s ease",
+            }}
           >
             <img src={artist.images} className="h-[400px] w-full" alt="" />
             <div className="flex justify-between items-center">

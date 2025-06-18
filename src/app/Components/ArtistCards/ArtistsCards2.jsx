@@ -1,8 +1,7 @@
 "use client";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 import Badge from "../Badge/Badge";
-import Link from "next/link";
 
 const artists = [
   {
@@ -43,7 +42,7 @@ const artists = [
 const ArtistCards2 = () => {
   const [popupImage, setPopupImage] = useState(null);
   const popupRef = useRef(null);
-  const lastFocusedImageRef = useRef(null); // Pour se souvenir du focus avant popup
+  const lastFocusedImageRef = useRef(null);
 
   const openPopup = (src, imageRef) => {
     lastFocusedImageRef.current = imageRef;
@@ -52,7 +51,6 @@ const ArtistCards2 = () => {
 
   const closePopup = () => {
     setPopupImage(null);
-    // Redonner le focus à l'image précédente après la fermeture
     if (lastFocusedImageRef.current) {
       lastFocusedImageRef.current.focus();
     }
@@ -140,7 +138,6 @@ const ArtistCards2 = () => {
                   <div className="flex mt-auto">
                     <a
                       href={artist.interview}
-                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2 bg-transparent text-[#1e2127] rounded border border-[#1e2127] text-sm font-medium hover:bg-[#1e2127] hover:text-white transition"
                       aria-label={`Interview de ${artist.prenom} ${artist.nom}`}
                     >
@@ -154,8 +151,6 @@ const ArtistCards2 = () => {
           );
         })}
       </div>
-
-      {/* === MODAL POPUP IMAGE === */}
       {popupImage && (
         <div
           ref={popupRef}
@@ -190,22 +185,21 @@ const ArtistCards2 = () => {
         </div>
       )}
 
-      {/* === BOUTON "VOIR TOUS LES ARTISTES" === */}
       <div className="w-full flex justify-center items-center z-10">
-        <Link
+        <a
           href="/Artiste"
-          rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center gap-2 px-6 py-3 
-          bg-[#1e2127] text-white rounded-[2px] text-[16px] w-fit font-medium 
-          border border-[#1e2127] transition 
-          hover:bg-transparent hover:text-[#1e2127] hover:underline hover:decoration-[#1e2127] 
-          focus:outline-none focus-visible:ring-4 focus-visible:ring-white/50 
-          focus-visible:bg-transparent focus-visible:text-[#1e2127] focus-visible:underline focus-visible:decoration-[#1e2127]"
-          aria-label="Musée virtuel"
+          className="group inline-flex items-center gap-2 px-6 py-3 bg-[#1e2127] text-[#FFFDEF] rounded-[2px] text-base w-fit font-medium border-[#1e2127] border-[1px]
+                hover:bg-[#FFFDEF] hover:text-[#1e2127]
+                focus-visible:bg-[#FFFDEF] focus-visible:text-[#1e2127]
+                focus:underline transition underline-anim"
         >
           Voir tous les artistes
-          <ArrowUpRight size={20} />
-        </Link>
+          <ArrowRight
+            size={20}
+            className="transition-transform duration-300  group-hover:[transform:rotate(-50deg)]"
+            aria-hidden="true"
+          />
+        </a>
       </div>
     </div>
   );
