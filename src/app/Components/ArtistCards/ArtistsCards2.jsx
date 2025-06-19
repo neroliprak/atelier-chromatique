@@ -2,47 +2,19 @@
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 import Badge from "../Badge/Badge";
-
-const artists = [
-  {
-    nom: "Bari",
-    prenom: "Abderhaman",
-    bio: `Dans cette toile vive et intense, Abderhaman Bari laisse libre cours à son imaginaire. Les couleurs semblent jaillir de la surface : le bleu profond du bas évoque une mer agitée ou un rêve en mouvement, tandis que le rouge et l’orange, en vagues incandescentes, rappellent la chaleur d’un feu ou les battements d’un cœur en pleine effusion.`,
-    couleur: "#F8B8D3",
-    couleurClaire: "#FFE7F1",
-    couleurName: "Salle Rose",
-    tache: "img/rose.png",
-    images: ["img/Compressed_Salle rose/Abderhaman-Bari-Salle-rose.jpg"],
-    interview: null,
-  },
-  {
-    nom: "Roynette",
-    prenom: "Adrien",
-    bio: `Cette toile offerte au chef d’établissement de la Résidence du Maine incarne la joie et l’espoir d’Adrien Roynette. Aux mille couleurs vives, formes et teintes s’entrelacent pour créer une composition lumineuse. Pour l’artiste, exposer ses œuvres est un témoignage, un message d’espoir pour tous ceux qui traversent des moments difficiles.    `,
-    couleur: "#F8B8D3",
-    couleurName: "Salle Rose",
-    couleurClaire: "#FFE7F1",
-    tache: "img/rose2.png",
-    images: ["img/Compressed_Salle rose/Adrien-Roynette-Salle-rose.jpg"],
-    interview: "https://youtu.be/z2hzT3HkwKw ",
-  },
-  {
-    nom: "Mayolle",
-    prenom: "Alexandra",
-    bio: `Peinte à la Résidence du Maine, cette toile est l’expression brute des émotions d’Alexandra Mayolle. Les couleurs s’y mêlent en un ensemble harmonieux et contrasté. Des nuances de bleu décorent les coins en haut à gauche et en bas à droite de la toile, tandis que les deux autres coins opposés sont peints de différentes teintes de jaune.`,
-    couleur: "#D0D0D0",
-    couleurName: "Salle Noire",
-    couleurClaire: "#F2EEF3",
-    tache: "img/noire.png",
-    images: ["img/Compressed_Salle noire/Alexandra-Mayolle-Salle-noir-(3).jpg"],
-    interview: "https://youtu.be/qRCVqbjsvlw ",
-  },
-];
+import artistesData from "../../data/artistes.json";
 
 const ArtistCards2 = () => {
   const [popupImage, setPopupImage] = useState(null);
   const popupRef = useRef(null);
   const lastFocusedImageRef = useRef(null);
+
+  const [artists, setArtists] = useState([]);
+  const imageRefs = useRef([]);
+
+  useEffect(() => {
+    setArtists(artistesData);
+  }, []);
 
   const openPopup = (src, imageRef) => {
     lastFocusedImageRef.current = imageRef;
@@ -84,8 +56,10 @@ const ArtistCards2 = () => {
   return (
     <div className="relative z-[10]">
       <div className="grid grid-cols-1 md:grid-cols-1 gap-6 px-4 md:px-16 py-10 ">
-        {artists.map((artist, idx) => {
-          const imageRef = useRef(null);
+        {artists.slice(0, 3).map((artist, idx) => {
+          if (!imageRefs.current[idx]) {
+            imageRefs.current[idx] = React.createRef();
+          }
 
           return (
             <div
@@ -102,21 +76,27 @@ const ArtistCards2 = () => {
                 (e.currentTarget.style.backgroundColor = "transparent")
               }
             >
-              <div className="w-[600px] h-[300px] relative overflow-hidden flex items-center justify-center">
+              <div className="w-[600px] h-[400px] relative overflow-hidden flex items-center justify-center">
                 <img
-                  ref={imageRef}
+                  ref={imageRefs.current[idx]}
                   src={`/${artist.images[0]}`}
                   alt={`${artist.prenom} ${artist.nom}`}
                   className="w-full h-full object-cover transition duration-300 hover:scale-105 focus-visible:scale-105 focus-visible:rotate-2 focus-visible:brightness-80 cursor-pointer"
                   role="button"
                   tabIndex={0}
                   onClick={() =>
-                    openPopup(`/${artist.images[0]}`, imageRef.current)
+                    openPopup(
+                      `/${artist.images[0]}`,
+                      imageRefs.current[idx].current
+                    )
                   }
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
                       e.preventDefault();
-                      openPopup(`/${artist.images[0]}`, imageRef.current);
+                      openPopup(
+                        `/${artist.images[0]}`,
+                        imageRefs.current[idx].current
+                      );
                     }
                   }}
                 />
@@ -132,7 +112,7 @@ const ArtistCards2 = () => {
                   </Badge>
                 </div>
 
-                <p className="text-[14px] mb-4 mt-4">{artist.bio}</p>
+                <p className="text-[14px] mb-4 mt-4 ">{artist.bio}</p>
 
                 {artist.interview && (
                   <div className="flex mt-auto">
@@ -151,6 +131,7 @@ const ArtistCards2 = () => {
           );
         })}
       </div>
+
       {popupImage && (
         <div
           ref={popupRef}
@@ -172,14 +153,14 @@ const ArtistCards2 = () => {
             <button
               onClick={closePopup}
               aria-label="Fermer l'image"
-              className="cursor-pointer hover:text-[#ff3344]  absolute top-4 right-4 text-white text-3xl font-bold bg-black/50 rounded px-2 focus-visible:ring-2 "
+              className="cursor-pointer hover:text-[#ff3344] absolute top-4 right-4 text-white text-3xl font-bold bg-black/50 rounded px-2 focus-visible:ring-2 "
             >
               ×
             </button>
             <img
               src={popupImage}
               alt="Image agrandie d’une œuvre d’art"
-              className="max-w-full max-h-full  w-[700px] h-[700px] object-contain "
+              className="max-w-full max-h-full w-[700px] h-[700px] object-contain"
             />
           </div>
         </div>

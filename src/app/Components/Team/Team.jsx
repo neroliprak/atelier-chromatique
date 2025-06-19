@@ -47,7 +47,7 @@ max-sm:h-[1800px]"
           </div>
           <div className="flex justify-center z-10 ">
             <a
-              href="/Equipes"
+              href="/Equipe"
               className="group inline-flex items-center gap-2 px-6 py-3 bg-[#1e2127] text-[#FFFDEF] rounded-[2px] text-base w-fit font-medium border-[#1e2127] border-[1px]
                 hover:bg-[#FFFDEF] hover:text-[#1e2127]
                 focus-visible:bg-[#FFFDEF] focus-visible:text-[#1e2127]
@@ -116,7 +116,7 @@ max-sm:h-[1800px]"
 
             <div className="absolute w-full flex justify-center items-center z-10 top-[50%]">
               <a
-                href="/Equipes"
+                href="/Equipe"
                 className="group inline-flex items-center gap-2 px-6 py-3 bg-[#1e2127] text-[#FFFDEF] rounded-[2px] text-base w-fit font-medium border-[#1e2127] border-[1px]
                 hover:bg-[#FFFDEF] hover:text-[#1e2127]
                 focus-visible:bg-[#FFFDEF] focus-visible:text-[#1e2127]

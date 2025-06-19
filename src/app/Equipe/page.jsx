@@ -90,7 +90,7 @@ const Teams = () => {
                 alt="manu"
               />
               <p className="relative bottom-[12%] left-[18%]">
-                Manu TEAO HEREVERI
+                Manu Teao Hereveri
               </p>
             </div>
 
