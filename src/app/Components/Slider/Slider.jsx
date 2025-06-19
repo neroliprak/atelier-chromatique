@@ -8,18 +8,18 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 
 const images = [
-  "/img/salle-blanche-musee.png",
-  "/img/salle-verte-musee.png",
-  "/img/salle-jaune-musee.png",
-  "/img/salle-noire-musee.png",
-  "/img/salle-rose-musee.png",
-  "/img/salle-bleu.png",
+  "/img/photos-salles/salle-blanche-musee.png",
+  "/img/photos-salles/salle-verte-musee.png",
+  "/img/photos-salles/salle-jaune-musee.png",
+  "/img/photos-salles/salle-noire-musee.png",
+  "/img/photos-salles/salle-rose-musee.png",
+  "/img/photos-salles/salle-bleu-musee.png",
 ];
 
 const Slider = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const visibleImages = images.slice(0, 5);
+  const visibleImages = images.slice(0, 6);
 
   return (
     <div className="w-full px-4 md:px-[90px] py-[40px] relative">
@@ -74,8 +74,8 @@ const Slider = () => {
         <button
           ref={prevRef}
           type="button"
-          className="swiper-button-prev w-auto h-auto p-0 left-2 top-1/2 absolute z-10 after:hidden focus:outline-none focus:ring-2 focus:ring-black"
-          aria-label="Slide précédente"
+          className="swiper-button-prev w-auto h-auto p-0 left-2 top-1/2 absolute z-10 after:hidden"
+          aria-label="Diapo précédente"
         >
           <img
             src="/img/slider-left.svg"
@@ -87,8 +87,8 @@ const Slider = () => {
         <button
           ref={nextRef}
           type="button"
-          className="swiper-button-next right-2 top-1/2 absolute z-10 focus:outline-none focus:ring-2 focus:ring-black after:hidden"
-          aria-label="Slide suivante"
+          className="swiper-button-next right-2 top-1/2 absolute z-10  after:hidden"
+          aria-label="Diapo suivante"
         >
           <img
             src="/img/slider-right.svg"

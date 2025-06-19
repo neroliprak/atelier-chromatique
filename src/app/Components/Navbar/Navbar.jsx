@@ -82,8 +82,13 @@ const Navbar2 = () => {
     <>
       {pathname === "/" && (
         <Link
-          href="/#main-content"
+          href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute bg-white text-[#20252C] z-[1000]"
+          onClick={(e) => {
+            e.preventDefault();
+            const main = document.getElementById("main-content");
+            main?.focus();
+          }}
         >
           Aller au contenu principal
         </Link>

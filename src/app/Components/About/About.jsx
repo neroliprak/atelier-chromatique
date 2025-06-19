@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 const About = () => {
   return (
-    <main id="main-content">
+    <main id="main-content" tabIndex={-1}>
       <section
         id="about"
         aria-labelledby="about-heading"
@@ -36,7 +36,7 @@ const About = () => {
 
           <div className="w-full flex justify-start items-center z-10">
             <a
-              href="https://neroliprak.fr"
+              href="https://drive.google.com/file/d/1OpFEce8lKSvMOtf50NxPsUayAClIrAOv/view?usp=sharing"
               className="group inline-flex items-center gap-2 px-6 py-3 bg-[#1e2127] text-[#FFFDEF] rounded-[2px] text-base w-fit font-medium border-[#1e2127] border-[1px]
                 hover:bg-[#FFFDEF] hover:text-[#1e2127]
                 focus-visible:bg-[#FFFDEF] focus-visible:text-[#1e2127]

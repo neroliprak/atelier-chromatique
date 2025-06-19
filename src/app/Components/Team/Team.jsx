@@ -25,22 +25,22 @@ max-sm:h-[1800px]"
           </p>
           <div className="flex flex-wrap justify-center gap-4 my-[30px]">
             <img
-              src="./img/group1-polaroid.png"
+              src="./img/equipe/group1-polaroid.png"
               className="w-[250px]"
               alt="Membre 4"
             />
             <img
-              src="./img/group2-polaroid.png"
+              src="./img/equipe/group2-polaroid.png"
               className="w-[250px]"
               alt="Membre 4"
             />
             <img
-              src="./img/group3-polaroid.png"
+              src="./img/equipe/group3-polaroid.png"
               className="w-[250px]"
               alt="Membre 4"
             />
             <img
-              src="./img/group4-polaroid.png"
+              src="./img/equipe/group4-polaroid.png"
               className="w-[250px]"
               alt="Membre 4"
             />
@@ -72,7 +72,7 @@ max-sm:h-[1800px]"
             style={{ transform: "translateY(-50%) rotate(-10deg)" }}
           >
             <img
-              src="./img/group1-polaroid.png"
+              src="./img/equipe/group1-polaroid.png"
               className="w-[300px]"
               alt="Membre 1"
             />
@@ -82,7 +82,7 @@ max-sm:h-[1800px]"
             style={{ transform: "translateY(-50%) rotate(-30deg)" }}
           >
             <img
-              src="./img/group2-polaroid.png"
+              src="./img/equipe/group2-polaroid.png"
               className="w-[300px]"
               alt="Andréa"
             />
@@ -92,7 +92,7 @@ max-sm:h-[1800px]"
             style={{ transform: "translateY(-50%) rotate(8deg)" }}
           >
             <img
-              src="./img/group3-polaroid.png"
+              src="./img/equipe/group3-polaroid.png"
               className="w-[300px]"
               alt="Hugo"
             />
@@ -102,7 +102,7 @@ max-sm:h-[1800px]"
             style={{ transform: "translateY(-50%) rotate(20deg)" }}
           >
             <img
-              src="./img/group4-polaroid.png"
+              src="./img/equipe/group4-polaroid.png"
               className="w-[300px]"
               alt="Pauline"
             />

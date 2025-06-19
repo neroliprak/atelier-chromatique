@@ -158,9 +158,9 @@ const ArtistCards2 = () => {
           role="dialog"
           aria-modal="true"
           aria-label="Image agrandie"
-          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center cursor-default"
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center cursor-default "
           onClick={(e) => {
-            if (e.target === e.currentTarget) {
+            if (e.target === e.currentTarget || e.key === "Enter") {
               closePopup();
             }
           }}
@@ -172,14 +172,14 @@ const ArtistCards2 = () => {
             <button
               onClick={closePopup}
               aria-label="Fermer l'image"
-              className="absolute top-4 right-4 text-white text-3xl font-bold bg-black/50 rounded px-2 focus-visible:ring-2"
+              className="cursor-pointer hover:text-[#ff3344]  absolute top-4 right-4 text-white text-3xl font-bold bg-black/50 rounded px-2 focus-visible:ring-2 "
             >
               ×
             </button>
             <img
               src={popupImage}
               alt="Image agrandie d’une œuvre d’art"
-              className="max-w-full max-h-full object-contain"
+              className="max-w-full max-h-full  w-[700px] h-[700px] object-contain "
             />
           </div>
         </div>

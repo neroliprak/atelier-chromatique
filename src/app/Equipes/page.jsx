@@ -12,13 +12,13 @@ const Teams = () => {
             Notre équipe
           </h1>
 
-          <h2 className=" text-[2.5rem] text-center leading-[5.5rem] mt-[30px]">
-            LES COMMUNICANTS
+          <h2 className=" text-[2.5rem] text-center leading-[5.5rem] mt-[30px] uppercase">
+            Les communicants
           </h2>
           <div className="flex flex-wrap justify-center gap-6 my-[30px]">
             <div>
               <img
-                src="./img/pauline-polaroid.png"
+                src="./img/equipe/pauline-polaroid.png"
                 className="w-[250px]"
                 alt="Pauline"
               />
@@ -28,7 +28,7 @@ const Teams = () => {
             </div>
             <div>
               <img
-                src="./img/solene-polaroid.png"
+                src="./img/equipe/solene-polaroid.png"
                 className="w-[250px]"
                 alt="Solene"
               />
@@ -36,7 +36,7 @@ const Teams = () => {
             </div>
             <div>
               <img
-                src="./img/andrea-polaroid.png"
+                src="./img/equipe/andrea-polaroid.png"
                 className="w-[250px]"
                 alt="Andréa"
               />
@@ -44,7 +44,7 @@ const Teams = () => {
             </div>
             <div>
               <img
-                src="./img/hugo-polaroid.png"
+                src="./img/equipe/hugo-polaroid.png"
                 className="w-[250px]"
                 alt="Andréa"
               />
@@ -52,13 +52,13 @@ const Teams = () => {
             </div>
           </div>
 
-          <h2 className="text-[2.5rem] text-center leading-[5.5rem] mt-[30px]">
-            LES DÉVELOPPEURS
+          <h2 className="text-[2.5rem] text-center leading-[5.5rem] mt-[30px] uppercase">
+            Les développeurs
           </h2>
           <div className="flex flex-wrap justify-center gap-6 my-[30px]">
             <div>
               <img
-                src="./img/daria-polaroid.png"
+                src="./img/equipe/daria-polaroid.png"
                 className="w-[250px]"
                 alt="Daria"
               />
@@ -67,7 +67,7 @@ const Teams = () => {
 
             <div>
               <img
-                src="./img/waldi-polaroid.png"
+                src="./img/equipe/waldi-polaroid.png"
                 className="w-[250px]"
                 alt="waldi"
               />
@@ -76,7 +76,7 @@ const Teams = () => {
 
             <div>
               <img
-                src="./img/arthur-polaroid.png"
+                src="./img/equipe/arthur-polaroid.png"
                 className="w-[250px]"
                 alt="arthur"
               />
@@ -85,7 +85,7 @@ const Teams = () => {
 
             <div>
               <img
-                src="./img/manu-polaroid.png"
+                src="./img/equipe/manu-polaroid.png"
                 className="w-[250px]"
                 alt="manu"
               />
@@ -96,7 +96,7 @@ const Teams = () => {
 
             <div>
               <img
-                src="./img/caroline-polaroid.png"
+                src="./img/equipe/caroline-polaroid.png"
                 className="w-[250px]"
                 alt="caroline"
               />
@@ -105,7 +105,7 @@ const Teams = () => {
 
             <div>
               <img
-                src="./img/neroli-polaroid.png"
+                src="./img/equipe/neroli-polaroid.png"
                 className="w-[250px]"
                 alt="Néroli"
               />
