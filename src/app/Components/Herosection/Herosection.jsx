@@ -36,8 +36,7 @@ const Herosection = () => {
 
         <div className="w-full flex top-[250px] justify-center items-center z-20 relative btn-top-herosection">
           <a
-            href="https://neroliprak.fr"
-            rel="noopener noreferrer"
+            href="hhttps://drive.google.com/file/d/1uPG5rhstFw-6gpADsYpCJAv-nsDfAD_z/view?usp=sharing"
             className="group mt-8 inline-flex items-center gap-2 px-6 py-3 bg-transparent text-white rounded-[2px] text-base w-fit font-medium border-white border-[1px]
     hover:bg-white hover:text-[#1e2127]
     focus-visible:bg-white focus-visible:text-[#1e2127]
