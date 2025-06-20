@@ -20,7 +20,7 @@ const Teams = () => {
               <img
                 src="./img/equipe/pauline-polaroid.png"
                 className="w-[250px]"
-                alt="Pauline"
+                alt=""
               />
               <p className="relative bottom-[12%] left-[22%]">
                 Pauline Gazengel
@@ -30,7 +30,7 @@ const Teams = () => {
               <img
                 src="./img/equipe/solene-polaroid.png"
                 className="w-[250px]"
-                alt="Solene"
+                alt=""
               />
               <p className="relative bottom-[12%] left-[24%]">Solène Jeannin</p>
             </div>
@@ -38,7 +38,7 @@ const Teams = () => {
               <img
                 src="./img/equipe/andrea-polaroid.png"
                 className="w-[250px]"
-                alt="Andréa"
+                alt=""
               />
               <p className="relative bottom-[12%] left-[24%]">Andréa Laizeau</p>
             </div>
@@ -46,7 +46,7 @@ const Teams = () => {
               <img
                 src="./img/equipe/hugo-polaroid.png"
                 className="w-[250px]"
-                alt="Andréa"
+                alt=""
               />
               <p className="relative bottom-[12%] left-[24%]">Hugo Payeux</p>
             </div>
@@ -60,7 +60,7 @@ const Teams = () => {
               <img
                 src="./img/equipe/daria-polaroid.png"
                 className="w-[250px]"
-                alt="Daria"
+                alt=""
               />
               <p className="relative bottom-[12%] left-[24%]">Daria Iarovaia</p>
             </div>
@@ -69,7 +69,7 @@ const Teams = () => {
               <img
                 src="./img/equipe/waldi-polaroid.png"
                 className="w-[250px]"
-                alt="waldi"
+                alt=""
               />
               <p className="relative bottom-[12%] left-[29%]">Waldi Fiaga</p>
             </div>
@@ -78,7 +78,7 @@ const Teams = () => {
               <img
                 src="./img/equipe/arthur-polaroid.png"
                 className="w-[250px]"
-                alt="arthur"
+                alt=""
               />
               <p className="relative bottom-[12%] left-[24%]">Arthur Zachary</p>
             </div>
@@ -87,7 +87,7 @@ const Teams = () => {
               <img
                 src="./img/equipe/manu-polaroid.png"
                 className="w-[250px]"
-                alt="manu"
+                alt=""
               />
               <p className="relative bottom-[12%] left-[18%]">
                 Manu Teao Hereveri
@@ -98,7 +98,7 @@ const Teams = () => {
               <img
                 src="./img/equipe/caroline-polaroid.png"
                 className="w-[250px]"
-                alt="caroline"
+                alt=""
               />
               <p className="relative bottom-[12%] left-[24%]">Caroline Doung</p>
             </div>
@@ -107,7 +107,7 @@ const Teams = () => {
               <img
                 src="./img/equipe/neroli-polaroid.png"
                 className="w-[250px]"
-                alt="Néroli"
+                alt=""
               />
               <p className="relative bottom-[12%] left-[32%]">Néroli Prak</p>
             </div>

@@ -2,7 +2,6 @@
 import { ArrowRight } from "lucide-react";
 import "./../../Artiste/artiste.css";
 import "../Navbar/navbar.css";
-import Link from "next/link";
 
 const Team = () => {
   return (
@@ -27,22 +26,22 @@ max-sm:h-[1800px]"
             <img
               src="./img/equipe/group1-polaroid.png"
               className="w-[250px]"
-              alt="Membre 4"
+              alt=""
             />
             <img
               src="./img/equipe/group2-polaroid.png"
               className="w-[250px]"
-              alt="Membre 4"
+              alt=""
             />
             <img
               src="./img/equipe/group3-polaroid.png"
               className="w-[250px]"
-              alt="Membre 4"
+              alt=""
             />
             <img
               src="./img/equipe/group4-polaroid.png"
               className="w-[250px]"
-              alt="Membre 4"
+              alt=""
             />
           </div>
           <div className="flex justify-center z-10 ">
@@ -74,7 +73,7 @@ max-sm:h-[1800px]"
             <img
               src="./img/equipe/group1-polaroid.png"
               className="w-[300px]"
-              alt="Membre 1"
+              alt=""
             />
           </div>
           <div
@@ -84,7 +83,7 @@ max-sm:h-[1800px]"
             <img
               src="./img/equipe/group2-polaroid.png"
               className="w-[300px]"
-              alt="Andréa"
+              alt=""
             />
           </div>
           <div
@@ -94,7 +93,7 @@ max-sm:h-[1800px]"
             <img
               src="./img/equipe/group3-polaroid.png"
               className="w-[300px]"
-              alt="Hugo"
+              alt=""
             />
           </div>
           <div
@@ -104,7 +103,7 @@ max-sm:h-[1800px]"
             <img
               src="./img/equipe/group4-polaroid.png"
               className="w-[300px]"
-              alt="Pauline"
+              alt=""
             />
           </div>
           <div>
